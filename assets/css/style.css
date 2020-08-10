@@ -8,6 +8,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -24,6 +25,12 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
+}
+hr {
+	border-color: #FFC200;
+	max-width: 150px;
+	border: 1px solid #FFC200;
+	align-items: right;
 }
 
 /*--------------------------------------------------------------
@@ -45,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #3498db;
+  background: #FFC200;
   color: #fff;
   transition: all 0.4s;
 }
@@ -96,7 +103,14 @@ h1, h2, h3, h4, h5, h6 {
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 65px;
+  height:120px;
+}
+
+.img-logo{
+	width: 250px;
+    height: 100px;
+	vertical-align: top;
 }
 
 @media (max-width: 768px) {
@@ -111,6 +125,50 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+/*Popup css*/
+.popup {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.popuptext {
+  visibility: hidden;
+  width: 700px;
+  height: 200px;
+  background-color: #FFFFFF;
+  color: #000000;
+  text-align: left;
+  border-radius: 0px;
+  padding: 0px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+
+}
+
+
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+/*----------------------------------------------------------------*/
 /* Desktop Navigation */
 .nav-menu, .nav-menu * {
   margin: 0;
@@ -135,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #FEAE0C;
+  color: #FFC200;
   text-decoration: none;
 }
 
@@ -197,7 +255,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: #3498db;
+  color: #FFC200;
 }
 
 .nav-menu .drop-down > a:after {
@@ -292,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #3498db;
+  color: #FFC200;
   text-decoration: none;
 }
 
@@ -370,8 +428,8 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  
-  
+
+
 }
 
 #hero h1 {
@@ -390,12 +448,12 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero .imagewrapparent {
   position: relative;
-  
+
 }
 
 #hero .imagewrap {
  overflow: hidden;
- 
+
 }
 #hero .btn-watch-video{
   background-color: #FEAE0C;
@@ -408,21 +466,21 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   position:absolute;
   top:-40px;
-  right:0% ; 
+  right:0% ;
 }
 
 #hero .beeconnect{
   background-color: #262626;
-  
+
   width: 361px;
   height: 200px;
   color: white;
   padding: 12px 16px;
-  
+
   cursor: pointer;
   position:absolute;
   bottom:0px;
-  left:0% ; 
+  left:0% ;
 }
 
 #hero .beeconnect #beeconnect_head{
@@ -431,7 +489,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 39.89%;
   top: calc(50% - 17px/2 - 76.5px);
 
-  font-family: Montserrat;
+
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -449,15 +507,12 @@ h1, h2, h3, h4, h5, h6 {
   top: 35.56%;
   bottom: 26.06%;
 
-  font-family: Muli;
+  font-family: Calibri (Body);
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 26px;
   /* or 144% */
-
-  letter-spacing: 1.02857px;
-
   color: #FFFFFF;
 }
 
@@ -466,26 +521,39 @@ h1, h2, h3, h4, h5, h6 {
   height: 26px;
   top:150px;
   right:10% ;
-
-
-  font-family: Muli;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 26px;
   /* identical to box height, or 162% */
 
-  letter-spacing: 0.914286px;
+
 
   color: #FFFFFF !important;
 }
-
+/*======= Strat of Bee Section  CSS======= */
 .be-smart{
   margin-top: 20px;
-  margin-left: 170px;
-  width: 60%;
+  
+  margin-right: 50px;
+  width: 90%;
+  
 }
 
+.beeContainer {
+  position: relative;
+}
+
+.beeLogo {
+  position: absolute;
+  width: 40%;
+}
+
+.beeContent {
+  position: absolute;
+  width: 80%;
+}
+/*======= End of Bee Section Css======= */
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
@@ -563,7 +631,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f7fbfe;
+  background-color: #EEF3F4;;
 }
 
 .section-title {
@@ -652,6 +720,19 @@ section {
   font-weight: 600;
   font-size: 26px;
 }
+.abt{
+	margin: 0;
+	padding: 0;
+}
+
+.who-are-bee{
+  /* position: absolute; */
+  width: 128.83px;
+  height: 91px;
+  left: 161px;
+  top: 1682px;
+
+}
 
 .about .content ul {
   list-style: none;
@@ -703,6 +784,38 @@ section {
   text-decoration: none;
 }
 
+.imagebg1{
+	position:relative; 
+	left:0px; 
+	top:2px;
+	
+}
+.imagebg2{
+	position:relative; 
+	left:557px;
+	top: -430px;
+	
+}
+.imagebg3{
+	position:relative; 
+	left:500px; 
+	top:-550px;
+}
+.imagebg4{
+	position:relative; 
+	left:1042px; 
+	top:-605px;
+}
+.imagebg5{
+	position:relative; 
+	left:513px; 
+	top:-1051.3px;
+}
+.textposition{
+	position:relative; 
+	left:0px; 
+	top:-1205px;
+}
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
@@ -785,11 +898,30 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+@media(max-width: 767px) {
+  .services{
+  position: relative;
+  left: -10px !important;
+  }
+  .services .title1div1 {
+    left: -16px !important;
+  }
+  .services .icon-box{
+	 left: 12px !important;
+	 position: relative !important;
+  }
+}
+#services {
+  background: #EEF3F4 !important;	
+  margin-top: -1250px;
+}
+
 .services .icon-box .card {
   min-height: 400px;
+  
 }
 .services .icon-box .card .card-body .card-title{
-  font-family: Montserrat;
+
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -802,10 +934,10 @@ section {
 }
 
 .services .icon-box .card .card-body .card-text{
-  font-family: Muli;
+
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 30px;
   /* or 187% */
 
@@ -816,31 +948,29 @@ section {
 }
 
 .services .icon-box .card .card-body a{
-  font-family: Muli;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 26px;
   /* identical to box height, or 162% */
   position: absolute;
-  letter-spacing: 0.6px;
   color: #0B3852;
   right: 90px;
   bottom: 25px;
 }
 .services .icon-box {
-  padding: 10px;
   position: relative;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  border: none;
   transition: all 0.3s ease-in-out;
-  border-radius: 8px;
+  margin-bottom: 30px;
   z-index: 1;
 }
 
 .services .icon-box::before {
-  content: '';
+
+
   position: absolute;
   background: #e1f0fa;
   right: -60px;
@@ -863,20 +993,32 @@ section {
 
   .services .icon {
     margin: 0 auto 20px auto;
+    padding-top: 15px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+
+    transition: all 0.3s ease-in-out;
+  }
+   .services .icon1 {
+    margin: 0 auto 20px auto;
     padding-top: 10px;
     display: inline-block;
     text-align: center;
     border-radius: 50%;
     width: 80px;
     height: 80px;
-    
+
     transition: all 0.3s ease-in-out;
   }
 
-  .services .icon i {
+  .services .icon img {
     font-size: 36px;
     line-height: 1;
     color: #fff;
+    position: center;
   }
 
   .services hr{
@@ -907,12 +1049,12 @@ section {
   }
 
   .services .title1 {
-    
+
     margin-bottom: 15px;
-    
-    margin-top: 15px; 
+
+    margin-top: 15px;
     text-align: center;
-    font-family: Montserrat;
+
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -928,14 +1070,27 @@ section {
     color: #111;
   }
 
-  .services .title1div {
-    background-color: yellow; 
-    padding: 10px;
+  .services .title1div1 {
+    position: relative;
+    left: 5px;
+    top: -30px;
+   padding: 10px;
+   width: 120px;
+  }
+  .services .title1div2{
+    position: relative;
+    left: -105px;
+    top: -60px;
+   /* padding: 10px; */
+   min-width: 150px;
   }
 
   .services .title1divmid {
-    background-color: black; 
-    padding: 10px;
+    position: relative;
+    left: -105px;
+    top: -60px;
+   /* padding: 10px; */
+   min-width: 150px;
   }
   .services .description {
     font-size: 15px;
@@ -943,29 +1098,29 @@ section {
     margin-bottom: 0;
   }
 
+  .card {
+    border: none !important;
+  }
+
   .services .description1 {
-    font-family: Muli;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
     /* or 187% */
 
     text-align: center;
-    letter-spacing: 0.6px;
-
     color: #707070;
   }
 
   .icon-box span{
-    font-family: Muli;
+
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 26px;
-    /* identical to box height, or 162% */
 
-    letter-spacing: 0.6px;
+    /* identical to box height, or 162% */
 
     color: #0B3852;
   }
@@ -986,7 +1141,8 @@ section {
 # More Services
 --------------------------------------------------------------*/
 .more-services {
-  padding-top: 20px;
+  padding-top: 0px;
+  background-color: #FFCF35;
 }
 
 .more-services .card {
@@ -997,17 +1153,27 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-image: url("assets/img/bee-do-background.png");
+  border-radius: 0px;
+  
 }
 
 .more-services .card-body {
-  
-  
   padding: 15px 30px;
-  
   transition: 0.3s;
   transition: ease-in-out 0.4s;
   border-radius: 5px;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: 1150px 260px;
 }
+/* .more-services .p1 {
+  z-index: -1;
+  width: 180px;
+  height: 100px;
+  left: 5px;
+  top: 100px;
+} */
 
 .more-services .card-title {
   font-family: Playfair Display;
@@ -1018,8 +1184,13 @@ section {
   /* identical to box height, or 144% */
 
   letter-spacing: 0.6px;
-
   color: #0B3852;
+
+}
+@media (max-width:400px) {
+  .more-services .card-title{
+    font-size: 25px;
+  }
 }
 
 .more-services .card-title a {
@@ -1027,28 +1198,24 @@ section {
 }
 
 .more-services .card-text {
-  font-family: Muli;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 10px;
   /* or 187% */
 
   text-align: center;
-  letter-spacing: 0.6px;
-
   color: #0B3852;
 }
 
 .more-services .read-more a {
-  font-family: Muli;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 26px;
   /* identical to box height, or 144% */
 
-  letter-spacing: 0.675px;
+
 
   color: #FFFFFF;
   transition: 0.4s;
@@ -1069,6 +1236,9 @@ section {
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
+@media(max-width:360px){
+	
+}
 .features .icon-box {
   display: flex;
   align-items: center;
@@ -1107,9 +1277,190 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.testimonials .testimonial-wrap {
-  padding-left: 50px;
+.testimonials {
+  padding-top: 0px;
+  background-color: #EEF3F4
 }
+
+.testimonials .testimonial-wrap {
+  position: relative;
+  width: 100%;
+  height: 675px;
+  background-color: white;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width : 991px) {
+  .testimonials .testimonial-wrap {
+    width : 100% !important;
+  }
+}
+@media (max-width : 991px){
+  .note {
+    margin-top: 22% !important;
+    height: 90% !important;
+  }
+}
+
+.testimonials .container {
+  background-color: white;
+  margin-top: 50px;
+}
+
+.testimonials .block-content {
+  height: 490px;
+  width: 100%;
+}
+
+.block-content .block-previous {
+  position: relative;
+  width: 10%; /* (960-20)/3 */
+  height: 100%;
+  float: left;
+  margin-left: 4% ;
+}
+
+.block-previous .previous {
+  position: absolute;
+  background-color: #f1f1f1;
+  color: black;
+  left: 50% !important;
+  top: 45% !important;
+  
+}
+
+.testimonials .block1 {
+  background: url(../img/BFuture.jpg);
+  width: 32%; /* (960-20)/3 */
+  height: 100%;
+  float: left;
+  margin-left: 2% ;
+  margin-right: 2% ;
+  display: block;
+}
+
+.round {
+  padding: 8px 8px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+.block-content i {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.block-content i:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.block-content .block-next {
+  position: relative;
+  width: 10%; /* (960-20)/3 */
+  height: 100%;
+  float: left;
+  margin-right: 4% ;
+}
+
+.block-next .next {
+  position: absolute;
+  background-color: #f1f1f1;
+  color: black;
+  right: 50% !important;
+  top: 45% !important;
+}
+.bkbtn{
+  margin-top: 390px;
+  height: 100px;
+  margin-left: 0px;
+  width: 50%;
+  text-align: center;
+  border: none;
+  outline:none;
+  background-color: #FFCF35;
+  padding: 35px 0;
+}
+.bkbtn:focus {
+  border: none;
+  outline: none;
+}
+
+.bkbtn .show {
+  display: none;
+}
+
+.testimonials .block2 {
+  background: url(../img/Bitmap.jpg);
+  width: 32%; /* (960-20)/3 */
+  height: 100%;
+  float: left;
+  margin-left: 2%;
+  margin-right: 2% ;
+  display: block;
+}
+
+.note .show{
+  display: block;
+}
+
+.note {
+  display: none;
+  margin-top: 56%;
+  height: 50%;
+  margin-left: 0px;
+  width: 100%;
+  text-align: left;
+  border: 3px solid  #262626;
+  background-color:  #262626;
+  color: #FFFFFF;
+}
+
+.note .topic {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  /* identical to box height, or 167% */
+
+  letter-spacing: -0.75px;
+}
+
+.note .des {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 30px;
+  /* or 187% */
+
+}
+
+.back {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 30px;
+  height: 20px;
+  margin-left: 0px;
+  width: 50%;
+  text-align: left;
+  border: none;
+  outline:none;
+  background-color: #262626;
+  /* identical to box height, or 144% */
+
+  letter-spacing: 0.675px;
+
+  color: #FFFFFF;
+}
+
+.back:focus {
+  border: none;
+  outline: none;
+}
+
 
 .testimonials .testimonial-item {
   box-sizing: content-box;
@@ -1322,6 +1673,18 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
+@media (max-width: 360px) {
+  .team {
+    height: 3500px;
+  }
+  
+}
+.team {
+  
+}
+.que-card {
+  width: 20rem; padding-top: 8px;bottom: 450px;
+}
 .dot {
   height: 13px;
   width: 13px;
@@ -1330,15 +1693,14 @@ section {
   display: inline-block;
   margin-right: 5px;
 }
-
 .team .icon-box .card {
   min-height: 300px;
 }
 .team .icon-box .card .card-body .card-title{
-  font-family: Montserrat;
+
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
   /* identical to box height, or 167% */
 
@@ -1348,27 +1710,22 @@ section {
 }
 
 .team .icon-box .card .card-body .card-text{
-  font-family: Muli;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px;
   /* or 187% */
-
-  letter-spacing: 0.6px;
 
   color: #707070;
 }
 
 .team .icon-box .card .card-body a{
-  font-family: Muli;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 26px;
   /* identical to box height, or 162% */
   position: absolute;
-  letter-spacing: 0.6px;
   bottom: 10px;
   color: #0B3852;
 }
@@ -1483,18 +1840,17 @@ section {
 .pricing .box {
   padding: 20px;
   background: #ffffff;
-  
-  
+
+
   position: relative;
   overflow: hidden;
-  
+
 }
 
 .pricing .box h5 {
-  font-family: Muli;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   /* identical to box height, or 144% */
   letter-spacing: 0.675px;
@@ -1502,10 +1858,9 @@ section {
 }
 
 .pricing .box p {
- font-family: Muli;
  font-style: normal;
  font-weight: normal;
- font-size: 14px;
+ font-size: 13px;
  line-height: 30px;
  /* or 214% */
 
@@ -1514,11 +1869,33 @@ section {
  color: #0B3852;
 }
 
+.product-demo {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 280px;
+}
+
+.demo-form{
+  position: absolute; left: 17%; top: -100px;
+}
+
+.demo-background {
+  background-color: #FFCF35; height: 550px;
+}
+
+@media (max-width: 360px) {
+  .demo-form{
+    position: absolute; left: 0%; top: -100px;
+  }
+  .demo-background {
+    background-color: #FFCF35; height: 950px;
+  }
+}
 .pricing #secrow #thirow form .form-row .form-group .formLable{
-  font-family: Muli;
+
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 30px;
   /* identical to box height, or 187% */
 
@@ -1531,6 +1908,7 @@ section {
 .pricing #secrow #thirow form .form-row .form-group .textbx{
   background: #F5F6F7;
   border-radius: 4px;
+  border: none;
 }
 
 .pricing .box h4 {
@@ -1557,7 +1935,7 @@ section {
   padding: 0;
   list-style: none;
   color: #222222;
-  
+
   line-height: 20px;
   font-size: 14px;
 }
@@ -1651,6 +2029,7 @@ section {
   background-color: #262626;
   padding: 25px;
 }
+
 .contact .contact-about h3 {
   font-size: 28px;
   margin: 0 0 10px 0;
@@ -1662,10 +2041,10 @@ section {
 }
 
 .contact .contact-about h6 {
-  font-family: Muli;
+  font-family: Calibri (Body);
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   /* identical to box height */
 
@@ -1675,7 +2054,7 @@ section {
 }
 
 .contact .contact-about p {
-  font-family: Muli;
+
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -1718,7 +2097,7 @@ section {
   }
 
   .contact .info h6{
-    font-family: Muli;
+
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -1731,7 +2110,7 @@ section {
   }
 
   .contact .info p{
-    font-family: Muli;
+
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -1752,7 +2131,7 @@ section {
   }
 
   .contact .info a {
-    font-family: Muli;
+
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
